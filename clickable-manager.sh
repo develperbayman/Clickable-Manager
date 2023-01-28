@@ -48,8 +48,10 @@ do
 dialog --clear  --help-button --backtitle "Clickable-Manager" \
 --title "[ M A I N - M E N U ]" \
 --menu "" 15 50 4 \
-ClickableCreate "Create a Clickable project" \
-Calendar "Displays a calendar" \
+ClickableCreate "create a clickable project" \
+ClickableInstall "install a clickable package" \
+ClickableRun "run a clickable package on your phone" \
+ClickableDesktop "run a clickable package in a desktop emulator" \
 Terminal "Start a terminal emulator" \
 Exit "Exit to the shell" 2>"${INPUT}"
 
@@ -59,7 +61,9 @@ menuitem=$(<"${INPUT}")
 # make decsion 
 case $menuitem in
 	ClickableCreate) exec clickable create;;
-	Calendar) show_calendar;;
+	ClickableInstall) exec clickable install;;
+	ClickableRun) exec clickable run;;
+	ClickableDesktop) exec clickable desktop;;
 	Editor) show x-terminal-emulator -e "./application_name [arguments]" &;;
 	Exit) echo "Bye"; break;;
 esac
