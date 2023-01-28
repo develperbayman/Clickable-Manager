@@ -64,7 +64,7 @@ case $menuitem in
 	ClickableInstall) exec clickable install;;
 	ClickableRun) exec clickable run;;
 	ClickableDesktop) exec clickable desktop;;
-	Editor) show x-terminal-emulator -e "./application_name [arguments]" &;;
+	terminal) exec x-terminal-emulator  &;;
 	Exit) echo "Bye"; break;;
 esac
 
