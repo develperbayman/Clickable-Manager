@@ -52,6 +52,7 @@ dialog --clear  --help-button --backtitle "Clickable-Manager" \
 ClickableCreate "create a clickable project" \
 ClickableInstall "install a clickable package" \
 ClickableRun "run a clickable package on your phone" \
+ClickableBuild "build clickable package" \
 ClickableDesktop "run a clickable package in a desktop emulator" \
 Terminal "Start a terminal emulator" \
 Exit "Exit to the shell" 2>"${INPUT}"
@@ -64,6 +65,7 @@ case $menuitem in
 	ClickableCreate) exec clickable create;;
 	ClickableInstall) exec clickable install;;
 	ClickableRun) exec clickable run;;
+	ClickableBuild) exec clickable build;;
 	ClickableDesktop) exec clickable desktop;;
 	Terminal) exec x-terminal-emulator &;;
 	Exit) echo "Bye"; break;;
