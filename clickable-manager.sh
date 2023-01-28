@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # utilitymenu.sh - A sample shell script to display menus on screen
 # Store menu options selected by the user
 INPUT=/tmp/menu.sh.$$
