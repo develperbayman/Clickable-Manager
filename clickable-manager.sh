@@ -54,6 +54,7 @@ ClickableInstall "install a clickable package" \
 ClickableRun "run a clickable package on your phone" \
 ClickableBuild "build clickable package" \
 ClickableDesktop "run a clickable package in a desktop emulator" \
+ClickableShell "Opens a shell on the device via ssh" \
 Terminal "Start a terminal emulator" \
 Exit "Exit to the shell" 2>"${INPUT}"
 
@@ -67,6 +68,7 @@ case $menuitem in
 	ClickableRun) exec clickable run;;
 	ClickableBuild) exec clickable build;;
 	ClickableDesktop) exec clickable desktop;;
+	ClickableShell) exec clickable shell;;
 	Terminal) exec x-terminal-emulator &;;
 	Exit) echo "Bye"; break;;
 esac
